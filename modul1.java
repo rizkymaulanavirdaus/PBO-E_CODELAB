@@ -9,7 +9,7 @@ public class modul1{
         LocalDateTime timeNow = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-mm-dd");
 
-        int tahun,bulan;
+        int tahun,bulan,hari;
         String nama,huruf,tanggal;
         Scanner scan = new Scanner(System.in);
 
@@ -26,6 +26,7 @@ public class modul1{
         Period period = Period.between(ttl,today);
         tahun = period.getYears();
         bulan = period.getMonths();
+        hari = period.getDays();
 
         //output
         System.out.println(("Nama: " +nama));
@@ -46,7 +47,7 @@ public class modul1{
                 System.out.println("Jenis kelamin tidak diketahui" );
         }
         System.out.println("Tanggal Lahir:" + tanggal);
-        System.out.println("Umur anda:" + tahun + " Tahun " + bulan + " Bulan");
+        System.out.println("Umur anda:" + tahun + " Tahun " + bulan + " Bulan " + hari + " Hari");
 
 
         }
