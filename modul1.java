@@ -1,13 +1,10 @@
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Scanner;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class modul1{
     public static void main(String[] args){
-        LocalDateTime timeNow = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-mm-dd");
+
 
         int tahun,bulan,hari;
         String nama,huruf,tanggal;
@@ -29,18 +26,13 @@ public class modul1{
         hari = period.getDays();
 
         //output
+        System.out.println (" ");
         System.out.println(("Nama: " +nama));
         switch (huruf){
-            case "l":
+            case "l", "L":
                 System.out.println("Jenis Kelamin: Laki-laki");
                 break;
-            case "L":
-                System.out.println("Jenis Kelamin: Laki-laki");
-                break;
-            case "p":
-                System.out.println("Jenis Kelamin: Perempuan");
-                break;
-            case "P":
+            case "p", "P":
                 System.out.println("Jenis Kelamin: Perempuan");
                 break;
             default:
